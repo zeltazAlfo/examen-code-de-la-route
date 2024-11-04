@@ -1,0 +1,232 @@
+/* Reset des styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles du corps */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styles de l'en-tête */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Styles des sections */
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main:hover {
+    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles des titres */
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 1.8em;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #266dd4;
+}
+
+h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* Styles des paragraphes */
+p {
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+p:hover {
+    opacity: 0.8;
+}
+
+/* Styles des listes */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Styles des liens */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #266dd4;
+    transform: translateY(-2px);
+}
+
+/* Styles spécifiques aux liens sociaux */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    padding: 8px;
+    border-radius: 5px;
+    background: #e9ecef;
+    transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Styles de navigation */
+nav {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Permet le passage à la ligne */
+    justify-content: center; /* Centre les éléments */
+    padding: 0;
+}
+
+nav li {
+    flex: 1 1 auto; /* Permet aux éléments de s'adapter à l'espace disponible */
+    text-align: center; /* Centre le texte */
+    margin: 5px; /* Espacement entre les éléments */
+}
+
+nav a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Styles de la boîte de exam */
+.exam-box {
+    background: #e9ecef;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0.5; /* Dégradé initial */
+    pointer-events: none; /* Désactiver les événements sur la section */
+    transition: opacity 0.3s ease;
+    
+}
+
+.exam-box.active {
+    opacity: 1; /* Rendre la section opaque */
+    pointer-events: auto; /* Activer les événements */
+}
+
+.exam-box h2 {
+    margin-bottom: 15px;
+}
+
+
+/* Style pour le bouton "Commencer l'Examen" */
+#start-button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Couleur du bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto; /* Centrer le bouton */
+    display: block; /* S'assurer que le bouton est un bloc */
+    transition: background 0.3s ease;
+    font-size: 20px;
+}
+
+#start-button:hover {
+    background-color: #266dd4; /* Couleur au survol */
+}
+
+
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #266dd4;
+}
+
+.exam-iframe{
+    width: 60%;
+    height: 750px;
+    border : solid 0px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .main {
+        padding: 15px;
+    }
+    .exam-iframe{
+        width: 100%}
+}
